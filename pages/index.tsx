@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Head from 'next/head'
 
 const Ne = styled.span`
     font-size: 128px;
@@ -13,4 +14,9 @@ const Ne = styled.span`
     height: 100%;
 `;
 
-export default () => <Ne>ne</Ne>
+export default () => <>
+    <Head>
+        <title>Ar jau kraustomės?</title>
+    </Head>
+    <Ne>ne</Ne>
+</>
