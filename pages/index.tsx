@@ -7,9 +7,9 @@ const Ne = styled.span`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Helvetica;
+    font-family: Helvetica, Arial, sans-serif;;
     background: #ff6b00;
-    color: white;
+    color: #FFF;
     text-transform: uppercase;
     height: 100%;
 `;
