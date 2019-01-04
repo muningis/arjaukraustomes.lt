@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Head from 'next/head'
 
-const Ne = styled.span`
+const Span = styled.span`
     font-size: 128px;
     text-align: center;
     display: flex;
@@ -18,5 +18,5 @@ export default () => <>
     <Head>
         <title>Ar jau kraustomės?</title>
     </Head>
-    <Ne>ne</Ne>
+    <Span>taip!</Span>
 </>
