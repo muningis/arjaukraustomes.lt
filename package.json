@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "google-closure-compiler --js=src/sw.js --js_output_file=static/sw.js"
+    "build": "google-closure-compiler --js=src/sw.js --js_output_file=sw.js"
   },
   "repository": {
     "type": "git",
