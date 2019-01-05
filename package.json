@@ -1,0 +1,23 @@
+{
+  "name": "arjaukraustomes.lt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "google-closure-compiler": "^20181210.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "google-closure-compiler --js=src/sw.js --js_output_file=static/sw.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RokasMuningis/arjaukraustomes.lt.git"
+  },
+  "author": "Rokas Muningis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RokasMuningis/arjaukraustomes.lt/issues"
+  },
+  "homepage": "https://github.com/RokasMuningis/arjaukraustomes.lt#readme"
+}
