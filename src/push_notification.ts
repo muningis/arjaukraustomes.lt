@@ -10,9 +10,7 @@ export const initializeFirebase = () => {
     navigator.serviceWorker.register(
         "sw.js",
         { scope: "./" }
-    ).then((registration) => {
-        firebase.messaging().useServiceWorker(registration)
-    })
+    )
 }
 
 export const askForPermissionToSendNotificationd = async () => {
