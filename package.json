@@ -16,6 +16,9 @@
   "scripts": {
     "build": "parcel build src/app.ts --out-dir ./"
   },
+  "browserslist": [
+    "since 2017-06"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RokasMuningis/arjaukraustomes.lt.git"
