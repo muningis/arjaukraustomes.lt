@@ -10,22 +10,22 @@ export const initializeFirebase = () => {
     initializeServiceWorker()
 }
 
-export const initializeServiceWorker = async () => {
-    const registration = await navigator.serviceWorker.register(
+export const initializeServiceWorker = () => {
+    navigator.serviceWorker.register(
         "sw.js",
         { scope: "./" }
-    )
-    firebase.messaging().useServiceWorker(registration)
+    ).then((registration) => {
+        firebase.messaging().useServiceWorker(registration)
+    })
 
 }
 
 export const askForPermissionToSendNotificationd = async () => {
+    const messaging = firebase.messaging();
     try {
-        const messaging = firebase.messaging();
         await messaging.requestPermission();
     } catch (error) {}
     try {
-        const messaging = firebase.messaging();
         const token = await messaging.getToken();
         console.log(`token: ${token}`);
     } catch (error) {}

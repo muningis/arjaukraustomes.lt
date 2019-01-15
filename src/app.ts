@@ -1,6 +1,9 @@
-import { initializeFirebase, askForPermissionToSendNotificationd } from "./push_notification";
+import {
+    initializeFirebase,
+    askForPermissionToSendNotificationd
+} from "./push_notification";
 
 initializeFirebase();
-self.addEventListener('load', (event) => {
+self.addEventListener('load', () => {
     askForPermissionToSendNotificationd();
 })
