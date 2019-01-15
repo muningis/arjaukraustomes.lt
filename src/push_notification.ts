@@ -11,10 +11,6 @@ export const initializeFirebase = () => {
 }
 
 export const initializeServiceWorker = async () => {
-    if (navigator.serviceWorker.controller) {
-        return
-    }
-
     const registration = await navigator.serviceWorker.register(
         "sw.js",
         { scope: "./" }
