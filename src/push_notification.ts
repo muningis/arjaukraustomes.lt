@@ -7,17 +7,12 @@ export const initializeFirebase = () => {
         messagingSenderId: MESSAGING_SENDER_ID
     })
 
-    initializeServiceWorker()
-}
-
-export const initializeServiceWorker = () => {
     navigator.serviceWorker.register(
         "sw.js",
         { scope: "./" }
     ).then((registration) => {
         firebase.messaging().useServiceWorker(registration)
     })
-
 }
 
 export const askForPermissionToSendNotificationd = async () => {
