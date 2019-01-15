@@ -28,4 +28,9 @@ export const askForPermissionToSendNotificationd = async () => {
         const messaging = firebase.messaging();
         await messaging.requestPermission();
     } catch (error) {}
+    try {
+        const messaging = firebase.messaging();
+        const token = await messaging.getToken();
+        console.log(`token: ${token}`);
+    } catch (error) {}
 }
