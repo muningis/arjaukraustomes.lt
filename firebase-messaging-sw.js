@@ -16,5 +16,5 @@ firebase.initializeApp({
 // messages.
 const messaging = firebase.messaging()
 messaging.setBackgroundMessageHandler(function (payload) {
-  console.log(payload);
+  self.registration.showNotification('Test title', { body: 'Test message' })
 })
