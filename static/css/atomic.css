@@ -4,11 +4,17 @@
 .Bgc\(green-normal\) {
   background-color: #2ecc71;
 }
-.C\(dark-gray\) {
+.C\(gray-dark\) {
   color: #4f4c4c;
+}
+.C\(green-normal\) {
+  color: #2ecc71;
 }
 .D\(f\) {
   display: flex;
+}
+.Opacity\(0\.4\) {
+  filter: opacity(0.4);
 }
 .Jc\(c\) {
   justify-content: center;
@@ -51,6 +57,9 @@
 }
 .Mt\(-28px\) {
   margin-top: -28px;
+}
+.Mt\(48px\) {
+  margin-top: 48px;
 }
 .T\(28px\) {
   top: 28px;
