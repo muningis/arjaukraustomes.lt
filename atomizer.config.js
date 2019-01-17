@@ -10,6 +10,6 @@ module.exports = {
         'green-normal': '#2ecc71',
         'blue-light': '#f6fbfe',
 
-        font: 'PFDinTextPro, Helvetica, sans-serif'
+        font: 'Helvetica, sans-serif'
     }
 }
