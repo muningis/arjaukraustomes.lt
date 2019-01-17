@@ -6,6 +6,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "lib": [ "es2015", "dom" ]
+  },
+  "include": [
+    "src/types/*"
+  ]
 }
