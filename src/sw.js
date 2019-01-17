@@ -1,4 +1,4 @@
-const CACHE_NANE = 'ar-jau-kraustomes_v2';
+const CACHE_NANE = 'ar-jau-kraustomes_v3';
 const NO_MATCH_ERROR_CODE = 404;
 const NO_MATCH_REJECT_REASON = 'catched file was not found';
 
@@ -31,3 +31,17 @@ self.addEventListener('fetch', function (event) {
         })
     );
 });
+
+self.addEventListener('activate', function(event) {
+    event.waitUntil(
+      caches.keys().then(function(cache_names) {
+        return Promise.all(
+            cache_names.filter(function(cache_name) {
+            return cache_name !== CACHE_NANE
+          }).map(function(cacheName) {
+            return caches.delete(cache_name);
+          })
+        );
+      })
+    );
+  });
