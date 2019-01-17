@@ -1,7 +1,5 @@
 /node_modules
 .DS_STORE
-/app.js
-/app.map
-/sw.js
-/sw.map
+/static/js/*
+/static/css/*
 /.cache

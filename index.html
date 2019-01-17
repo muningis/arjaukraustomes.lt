@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="M(0) H(100%)" lang="lt">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
@@ -13,9 +14,40 @@
     <meta name="description" content="Ar mes jau kraustomės į naują offisą?" />
     <title>Ar jau kraustomės?</title>
 </head>
-<body class="M(0) H(100%) Fz(15vw) Ta(c) D(f) Jc(c) Ai(c) Bgc(#ff6b00) C(#000) Tt(u) Fw(w) Ff(ss)">
-    <div class="content W(100%)">taip</div>
-    <script src="./app.js"></script>
-    <link rel="stylesheet" href="atomic.css">
+<body class="M(0) H(100%) Ff(font)">
+    <header class="Bgc(blue-light) H(248px)">
+        <h1 class="C(gray-dark) Fz(60px) Fw(b) Lh(72px) Ta(c) Pt(64px) M(0) Ff">Ar jau</h1>
+        <h2 class="C(gray-dark) Fz(24px) Fs(i) Fw(300) Lh(29px) Ta(c) M(0)">kraustomės?</h2>
+    </header>
+
+    <div class="W(100%) H(60px) Pos(r) D(f) Jc(c) Mt(-28px)">
+        <div class="W(100%) H(4px) Bgc(green-normal) Pos(a) T(28px)"></div>
+        <img src="static/assets/checkmark.svg" class="Pos(a)" />
+    </div>
+
+    <main class="Mt(48px)">
+        <div class="C(gray-dark) Fz(60px) Lh(72px) Fw(300) Ta(c)">
+            <span class="C(green-normal) Fw(b)">Taip</span><span class="Opacity(0.4)">, liko:</span>
+        </div>
+        <div class="D(f) Fxw(w) Jc(c)">
+            <div class="Ta(c)">
+                <div class="js-hours C(gray-dark) Fz(60px) Fw(500) Lh(72px)"></div>
+                <span class="Opacity(0.4) Fz(12px) Lh(14px) Mt(-6px)">H</span>
+            </div>
+            <div class="C(gray-dark) Fz(60px) Fw(500)">:</div>
+            <div class="Ta(c)">
+                <div class="js-minutes C(gray-dark) Fz(60px) Fw(500) Lh(72px)"></div>
+                <span class="Opacity(0.4) Fz(12px) Lh(14px) Mt(-6px)">M</span>
+            </div>
+            <div class="C(gray-dark) Fz(60px) Fw(500)">:</div>
+            <div class="Ta(c)">
+                <div class="js-seconds C(gray-dark) Fz(60px) Fw(500) Lh(72px)"></div>
+                <span class="Opacity(0.4) Fz(12px) Lh(14px) Mt(-6px)">S</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="static/js/app.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
 </body>
 </html>

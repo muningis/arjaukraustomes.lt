@@ -1,10 +1,3 @@
-const initializeServiceWorker = () => {
-    navigator.serviceWorker.register(
-        "sw.js",
-        { scope: "./" }
-    ).then(function (registration) {
-        registration.unregister();
-    })
-}
+import CountDown from './count_down';
 
-initializeServiceWorker()
+new CountDown();
