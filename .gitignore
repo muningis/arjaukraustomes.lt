@@ -3,3 +3,4 @@
 /static/js/
 /static/css/
 /.cache
+/sw.js

@@ -17,9 +17,9 @@
   "scripts": {
     "build:ts:watch": "parcel build src/app.ts --out-dir ./static/js",
     "build:ts": "parcel build --no-source-maps build src/app.ts --out-dir ./static/js",
-    "build:atomic-css": "atomizer -c atomizer.config.js -o ./static/css/atomic.css ./index.html",
-    "build:css": "npm run-script build:atomic-css && postcss static/css/atomic.css > static/css/style.css",
-    "build": "npm run-script build:ts && npm run-script build:css"
+    "build:css": "atomizer -c atomizer.config.js -o ./static/css/atomic.css ./index.html && postcss static/css/atomic.css > static/css/style.css",
+    "build:sw": "mv static/js/sw.js sw.js",
+    "build": "npm run-script build:css && npm run-script build:ts && npm run-script build:sw"
   },
   "browserslist": [
     "since 2017-06"
