@@ -1,6 +1,6 @@
 import CountDown from './count_down';
 import ServiceWorkerFactory from './service_worker';
-import Tracker, { Categories } from './Tracker';
+import Tracker, { Categories } from './tracker';
 
 Tracker.trackEvent(Categories.PAGE_LOAD);
 new CountDown(1548050400000);
