@@ -67,6 +67,9 @@
 .Fw\(b\) {
   font-weight: bold;
 }
+.Fz\(12px\) {
+  font-size: 12px;
+}
 .Fz\(24px\) {
   font-size: 24px;
 }
@@ -88,6 +91,9 @@
 .H\(60px\) {
   height: 60px;
 }
+.Lh\(14px\) {
+  line-height: 14px;
+}
 .Lh\(29px\) {
   line-height: 29px;
 }
@@ -99,6 +105,9 @@
 }
 .Mt\(-28px\) {
   margin-top: -28px;
+}
+.Mt\(-6px\) {
+  margin-top: -6px;
 }
 .Mt\(48px\) {
   margin-top: 48px;

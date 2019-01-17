@@ -18,7 +18,7 @@ export default class CountDown {
             throw Error(`${selector} element does not exist`);
         }
 
-        ele.innerText = value.toString();
+        ele.innerText = this.padding(value);
     }
     
     update() {
@@ -40,6 +40,15 @@ export default class CountDown {
             '.js-seconds',
             Math.floor((this.distance % (minute)) / second)
         );
+    }
+
+    padding(str: string | number) {
+        str = str.toString();
+        if (str.length === 1) {
+            return `0${str}`;
+        }
+
+        return str;
     }
 }
 
