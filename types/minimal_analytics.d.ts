@@ -1,5 +1,5 @@
 interface MinimalAnalytics {
-    trackEvent(category: string, action?: string, label?: string, value?: string): void;
+    trackEvent(category: string, action?: string, label?: string, value?: string | number | boolean): void;
     trackException(description: string, fatal: string): void;
 }
 
