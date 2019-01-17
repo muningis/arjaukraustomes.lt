@@ -1,6 +1,6 @@
 const CACHE_NANE = 'ar-jau-kraustomes_v2';
 const NO_MATCH_ERROR_CODE = 404;
-const NO_MATCH_REJECT_REASON = 'no-match';
+const NO_MATCH_REJECT_REASON = 'catched file was not found';
 
 self.addEventListener('install', function (event) {
     const index_page = new Request('index.html');
@@ -13,7 +13,7 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('fetch', function (event) {
     const update_cache = async function (request) {
-        const cache = await caches.open('pwabuilder-offline');
+        const cache = await caches.open(CACHE_NANE);
         const response = await fetch(request);
         return cache.put(request, response);
     };
