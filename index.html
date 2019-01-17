@@ -3,28 +3,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-    <style>
-        html, body { margin: 0; height: 100%; }
-        body {
-            font-size: 15vw;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Helvetica, Arial, sans-serif;;
-            background: #ff6b00;
-            color: #000;
-            text-transform: uppercase;
-            height: 100%;
-            flex-wrap: wrap;
-        }
-        .content {
-            width: 100%;
-        }
-        .counter {
-            font-size: 30%;
-        }
-    </style>
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
@@ -37,17 +15,7 @@
 </head>
 <body class="Fz(15vw) Ta(c) D(f) Jc(c) Ai(c) Bgc(#ff6b00) C(#000) Tt(u) Fw(w)">
     <div class="content W(100%)">taip</div>
-    <div class="counter" id="counter">&nbsp;</div>
     <script src="./app.js"></script>
-    <script src="./static/countdown.min.js"></script>
     <link rel="stylesheet" href="atomic.css">
-    <script>
-        countdown(
-            new Date('2019-01-21T08:00:00+0200'),
-            function(ts) {
-                document.getElementById("counter").innerHTML = ts.toString();
-            },
-            countdown.DAYS|countdown.HOURS|countdown.MINUTES);
-    </script>
 </body>
 </html>
