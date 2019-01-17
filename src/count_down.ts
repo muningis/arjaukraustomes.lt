@@ -3,11 +3,9 @@ const minute: number = 6e4;
 const hour: number = 3.6e6;
 
 export default class CountDown {
-    private COUNT_DOWN_TO: number;
     private distance: number = 0;
 
-    constructor() {
-        this.COUNT_DOWN_TO = 1548050400000;
+    constructor(private COUNT_DOWN_TO: number) {
         requestAnimationFrame(this.update.bind(this));
     }
 
