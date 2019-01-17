@@ -10,11 +10,11 @@
   },
   "devDependencies": {
     "atomizer": "^3.5.2",
-    "parcel-bundler": "^1.11.0",
-    "parcel-plugin-typescript": "^1.0.0"
+    "parcel-bundler": "^1.11.0"
   },
   "scripts": {
-    "build": "parcel --no-source-maps build src/app.ts --out-dir ./static/js",
+    "build:watch": "parcel build src/app.ts --out-dir ./static/js",
+    "build": "parcel build --no-source-maps build src/app.ts --out-dir ./static/js",
     "build:atomic-css": "atomizer -c config/atomizer.js -o ./static/css/atomic.css ./index.html"
   },
   "browserslist": [

@@ -19,8 +19,14 @@
 .Jc\(c\) {
   justify-content: center;
 }
+.Fxw\(w\) {
+  flex-wrap: wrap;
+}
 .Fw\(300\) {
   font-weight: 300;
+}
+.Fw\(500\) {
+  font-weight: 500;
 }
 .Fw\(b\) {
   font-weight: bold;
