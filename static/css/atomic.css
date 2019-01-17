@@ -22,6 +22,9 @@
 .Fxw\(w\) {
   flex-wrap: wrap;
 }
+.Ff\(font\) {
+  font-family: PFDinTextPro, Helvetica, sans-serif;
+}
 .Fw\(300\) {
   font-weight: 300;
 }

@@ -13,9 +13,12 @@
     "parcel-bundler": "^1.11.0"
   },
   "scripts": {
-    "build:watch": "parcel build src/app.ts --out-dir ./static/js",
-    "build": "parcel build --no-source-maps build src/app.ts --out-dir ./static/js",
-    "build:atomic-css": "atomizer -c config/atomizer.js -o ./static/css/atomic.css ./index.html"
+    "build:ts:watch": "parcel build src/app.ts --out-dir ./static/js",
+    "build:ts": "parcel build --no-source-maps build src/app.ts --out-dir ./static/js",
+    "build:atomic-css": "atomizer -c config/atomizer.js -o ./static/css/atomic.css ./index.html",
+    "build:merge-css": "cat src/fonts.css static/css/atomic.css > static/css/style.css",
+    "build:css": "npm run-script build:atomic-css && build:merge-css",
+    "build": "npm run-script build:ts && build:css"
   },
   "browserslist": [
     "since 2017-06"
