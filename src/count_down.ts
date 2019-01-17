@@ -8,7 +8,7 @@ export default class CountDown {
     private distance: number = 0;
 
     constructor() {
-        this.COUNT_DOWN_TO = new Date('2019-01-21T08:00:00+0200').getTime();
+        this.COUNT_DOWN_TO = 1548050400000;
         requestAnimationFrame(this.update.bind(this));
     }
 
