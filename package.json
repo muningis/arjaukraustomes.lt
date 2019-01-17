@@ -4,20 +4,22 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
-    "firebase": "^5.7.3",
-    "google-closure-compiler": "^20181210.0.0",
+    "cssnano": "^4.1.8",
     "typescript": "^3.2.2"
   },
   "devDependencies": {
     "atomizer": "^3.5.2",
-    "parcel-bundler": "^1.11.0"
+    "install": "^0.12.2",
+    "npm": "^6.5.0",
+    "parcel-bundler": "^1.11.0",
+    "postcss-cli": "^6.1.1"
   },
   "scripts": {
     "build:ts:watch": "parcel build src/app.ts --out-dir ./static/js",
     "build:ts": "parcel build --no-source-maps build src/app.ts --out-dir ./static/js",
-    "build:atomic-css": "atomizer -c config/atomizer.js -o ./static/css/atomic.css ./index.html",
+    "build:atomic-css": "atomizer -c atomizer.config.js -o ./static/css/atomic.css ./index.html",
     "build:merge-css": "cat src/fonts.css static/css/atomic.css > static/css/style.css",
-    "build:css": "npm run-script build:atomic-css && npm run-script build:merge-css",
+    "build:css": "npm run-script build:atomic-css && npm run-script build:merge-css && postcss static/css/style.css > static/css/style.min.css",
     "build": "npm run-script build:ts && npm run-script build:css"
   },
   "browserslist": [
