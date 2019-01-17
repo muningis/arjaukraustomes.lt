@@ -1,4 +1,3 @@
-const day: number =  8.64e7;
 const second: number = 1e3;
 const minute: number = 6e4;
 const hour: number = 3.6e6;
@@ -51,19 +50,3 @@ export default class CountDown {
         return str;
     }
 }
-
-let countDown = new Date('Sep 30, 2019 00:00:00').getTime(),
-    x = setInterval(function() {
-
-      let now = new Date().getTime(),
-          distance = countDown - now;
-
-      
-      
-      //do something later when date is reached
-      //if (distance < 0) {
-      //  clearInterval(x);
-      //  'IT'S MY BIRTHDAY!;
-      //}
-
-    }, second)
