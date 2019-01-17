@@ -9,11 +9,13 @@
     "typescript": "^3.2.2"
   },
   "devDependencies": {
+    "atomizer": "^3.5.2",
     "parcel-bundler": "^1.11.0",
     "parcel-plugin-typescript": "^1.0.0"
   },
   "scripts": {
-    "build": "parcel build src/app.ts --out-dir ./"
+    "build": "parcel build src/app.ts --out-dir ./",
+    "build:atomic-css": "atomizer -o atomic.css ./index.html"
   },
   "browserslist": [
     "since 2017-06"
