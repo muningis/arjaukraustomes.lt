@@ -1,9 +1,8 @@
-import {
-    initializeFirebase,
-    askForPermissionToSendNotificationd
-} from "./push_notification";
+const initializeServiceWorker = () => {
+    navigator.serviceWorker.register(
+        "sw.js",
+        { scope: "./" }
+    )
+}
 
-initializeFirebase();
-self.addEventListener('load', () => {
-    askForPermissionToSendNotificationd();
-})
+initializeServiceWorker()
