@@ -1,4 +1,4 @@
-const CACHE_NANE = 'ar-jau-kraustomes_v4';
+const CACHE_NANE = 'ar-jau-kraustomes_v3';
 const NO_MATCH_ERROR_CODE = 404;
 const NO_MATCH_REJECT_REASON = 'catched file was not found';
 

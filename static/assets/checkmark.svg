@@ -1,6 +1,14 @@
-<svg width="60" height="60">
-    <g fill-rule="nonzero" fill="none">
-        <path d="M30 0C13.432 0 0 13.432 0 30c0 16.568 13.432 30 30 30 16.57 0 30-13.432 30-30C60 13.432 46.569 0 30 0z" fill="#2ECC71"/>
-        <path fill="#FFF" d="M24.497 45.41l-13.21-13.209L15.69 27.8l8.807 8.806L44.31 16.79l4.403 4.403z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>DC5BCA5B-BD2E-46F0-9FD9-B1E16A0D7917</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arjau-m-taip" transform="translate(-130.000000, -260.000000)" fill-rule="nonzero">
+            <g id="Y-icon" transform="translate(130.000000, 260.000000)">
+                <path d="M30,2.84217094e-14 C13.4322397,2.84217094e-14 2.84217094e-14,13.4316772 2.84217094e-14,30 C2.84217094e-14,46.5683228 13.4322397,60 30,60 C46.5695884,60 60,46.5683228 60,30 C60,13.4316772 46.5690259,2.84217094e-14 30,2.84217094e-14 Z" id="Circle" fill="#2ECC71"></path>
+                <polygon id="Check" fill="#FFFFFF" points="24.4967727 45.4104147 11.2871426 32.2013472 15.6899776 27.7985122 24.4967727 36.6047447 44.3100224 16.7909325 48.7128574 21.1937675"></polygon>
+            </g>
+        </g>
     </g>
 </svg>
