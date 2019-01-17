@@ -1,4 +1,4 @@
-const CACHE_NANE = 'ar-jau-kraustomes_v1';
+const CACHE_NANE = 'ar-jau-kraustomes_v2';
 const NO_MATCH_ERROR_CODE = 404;
 const NO_MATCH_REJECT_REASON = 'no-match';
 
