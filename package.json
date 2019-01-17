@@ -14,8 +14,8 @@
     "parcel-plugin-typescript": "^1.0.0"
   },
   "scripts": {
-    "build": "parcel build src/app.ts --out-dir ./",
-    "build:atomic-css": "atomizer -o atomic.css ./index.html"
+    "build": "parcel --no-source-maps build src/app.ts --out-dir ./static/js",
+    "build:atomic-css": "atomizer -c config/atomizer.js -o ./static/css/atomic.css ./index.html"
   },
   "browserslist": [
     "since 2017-06"
