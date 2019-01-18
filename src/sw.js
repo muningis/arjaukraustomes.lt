@@ -14,7 +14,8 @@ self.addEventListener('install', function (event) {
 self.addEventListener('fetch', function (event) {
     const update_cache = async function (request) {
         const cache = await caches.open(CACHE_NANE);
-        const response = await fetch(request.clone());
+        const req = request.clone();
+        const response = await fetch(req);
         return cache.put(request, response);
     };
 
