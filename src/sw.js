@@ -1,42 +1,33 @@
-var CACHE = 'ar-jau-kraustomes_v5';
-var PRECACHE_FILES = [
-    'index.html',
-    'static/css/style.css'
-];
+const CACHE_NAME = "ar-jau-kraustomes_v6";
 
-self.addEventListener('install', function (event) {
-    event.waitUntil(precache().then(function () {
-        return self.skipWaiting();
-    }));
+self.addEventListener("install", function (event) {
+    const index_page = new Request("index.html");
+    event.waitUntil(
+        fetch(index_page).then(async function (response) {
+            const cache = await caches.open(CACHE_NAME);
+            return cache.put(index_page, response);
+        })
+    );
 });
 
-self.addEventListener('activate', function () {
-    return self.clients.claim();
+self.addEventListener("fetch", function (event) {
+    async function update_cache(request) {
+        const cache = await caches.open(CACHE_NAME);
+        const response = await fetch(request);
+        return cache.put(request, response);
+    }
+
+    event.waitUntil(update_cache(event.request));
+
+    event.respondWith(
+        fetch(event.request).catch(async function () {
+            const cache = await caches.open(CACHE_NAME);
+            const matching = await cache.match(event.request);
+            var report =
+                !matching || matching.status == 404
+                    ? Promise.reject("no-match")
+                    : matching;
+            return report;
+        })
+    );
 });
-
-self.addEventListener('fetch', function (event) {
-    event.respondWith(from_cache(event.request).catch(from_server(event.request)));
-    event.waitUntil(update(event.request));
-});
-
-async function precache() {
-    const cache = await caches.open(CACHE);
-    return cache.addAll(PRECACHE_FILES);
-}
-
-async function from_cache(request) {
-    const cache = await caches.open(CACHE);
-    const matching = await cache.match(request);
-    return matching || Promise.reject('no-match');
-}
-
-async function update(request) {
-    const cache = await caches.open(CACHE);
-    const response = await fetch(request);
-    return cache.put(request, response);
-}
-
-async function from_server(request) {
-    const response = await fetch(request);
-    return response;
-}
