@@ -1,4 +1,4 @@
-const CACHE_NANE = 'ar-jau-kraustomes_v3';
+const CACHE_NANE = 'ar-jau-kraustomes_v4';
 const NO_MATCH_ERROR_CODE = 404;
 const NO_MATCH_REJECT_REASON = 'catched file was not found';
 
@@ -38,7 +38,7 @@ self.addEventListener('activate', function(event) {
         return Promise.all(
             cache_names.filter(function(cache_name) {
             return cache_name !== CACHE_NANE
-          }).map(function(cacheName) {
+          }).map(function(cache_name) {
             return caches.delete(cache_name);
           })
         );
