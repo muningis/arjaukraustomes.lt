@@ -4,13 +4,24 @@ const hour: number = 3.6e6;
 
 export default class CountDown {
     private distance: number = 0;
+    private parentElement: HTMLElement | null;
 
-    constructor(private COUNT_DOWN_TO: number) {
+    constructor(private COUNT_DOWN_TO: number, private SELECTOR: string) {
+        this.parentElement = document.querySelector(this.SELECTOR);
+
+        if (!this.parentElement) {
+            throw new Error(`${this.SELECTOR} does not exist`);
+        }
+
         requestAnimationFrame(this.update.bind(this));
     }
 
     setText(selector: string, value: string | number) {
-        const ele = document.querySelector<HTMLElement>(selector);
+        if (!this.parentElement) {
+            return;
+        }
+
+        const ele = this.parentElement.querySelector<HTMLElement>(selector);
         if (!ele) {
             throw Error(`${selector} element does not exist`);
         }
