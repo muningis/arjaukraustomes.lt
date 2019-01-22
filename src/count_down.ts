@@ -38,16 +38,20 @@ export default class CountDown {
     render() {
         this.setText(
             '.js-hours',
-            Math.floor(this.distance / (hour))
+            this.fixNumber(this.distance / (hour))
         );
         this.setText(
             '.js-minutes',
-            Math.floor((this.distance % (hour)) / (minute))
+            this.fixNumber((this.distance % (hour)) / (minute))
         );
         this.setText(
             '.js-seconds',
-            Math.floor((this.distance % (minute)) / second)
+            this.fixNumber((this.distance % (minute)) / second)
         );
+    }
+
+    fixNumber(num: number) {
+        return Math.floor(num) > 0 ? Math.floor(num) : 0;
     }
 
     padding(str: string | number) {
