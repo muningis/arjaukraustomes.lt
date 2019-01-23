@@ -30,9 +30,33 @@
 
     <main class="Mt(48px)">
         <div class="C(gray-dark) Fz(60px) Fz(84px)--sm Lh(72px) Lh(101px)--sm Fw(300) Ta(c)">
-            <span class="C(green-normal) Fw(b)">Taip</span><span class="Opacity(0.4)">, liko:</span>
+            <span class="C(green-normal) Fw(b)">15a.</span><span class="Fw(500)"> - Jau!</span>
         </div>
-        <div class="D(f) Fxw(w) Jc(c)">
+
+        <div class="C(gray-dark) Fz(60px) Fz(84px)--sm Lh(72px) Lh(101px)--sm Fw(300) Ta(c)">
+            <span class="C(green-normal) Fw(b)">11a. ir 33a.</span><span class="Opacity(0.4)">, liko:</span>
+        </div>
+        <div class="js-1133a D(f) Fxw(w) Jc(c)">
+            <div class="Ta(c)">
+                <div class="js-hours C(gray-dark) Fz(60px) Fz(84px)--sm Fw(500) Lh(72px) Lh(101px)--sm"></div>
+                <span class="Opacity(0.4) Fz(12px) Lh(14px) Mt(-6px)">H</span>
+            </div>
+            <div class="C(gray-dark) Fz(60px) Fz(84px)--sm Fw(500) Lh(72px) Lh(101px)--sm">:</div>
+            <div class="Ta(c)">
+                <div class="js-minutes C(gray-dark) Fz(60px) Fz(84px)--sm Fw(500) Lh(72px) Lh(101px)--sm"></div>
+                <span class="Opacity(0.4) Fz(12px) Lh(14px) Mt(-6px)">M</span>
+            </div>
+            <div class="C(gray-dark) Fz(60px) Fz(84px)--sm Fw(500) Lh(72px) Lh(101px)--sm">:</div>
+            <div class="Ta(c)">
+                <div class="js-seconds C(gray-dark) Fz(60px) Fz(84px)--sm Fw(500) Lh(72px) Lh(101px)--sm"></div>
+                <span class="Opacity(0.4) Fz(12px) Lh(14px) Mt(-6px)">S</span>
+            </div>
+        </div>
+
+        <div class="C(gray-dark) Fz(60px) Fz(84px)--sm Lh(72px) Lh(101px)--sm Fw(300) Ta(c)">
+            <span class="C(green-normal) Fw(b)">3a. ir 13a.</span><span class="Opacity(0.4)">, liko:</span>
+        </div>
+        <div class="js-313a D(f) Fxw(w) Jc(c)">
             <div class="Ta(c)">
                 <div class="js-hours C(gray-dark) Fz(60px) Fz(84px)--sm Fw(500) Lh(72px) Lh(101px)--sm"></div>
                 <span class="Opacity(0.4) Fz(12px) Lh(14px) Mt(-6px)">H</span>
@@ -49,27 +73,6 @@
             </div>
         </div>
     </main>
-
-    <script>
-        (function(a,b,c){var d=a.history,e=document,f=navigator||{},g=localStorage,
-        h=encodeURIComponent,i=d.pushState,k=function(){return Math.random().toString(36)},
-        l=function(){return g.cid||(g.cid=k()),g.cid},m=function(r){var s=[];for(var t in r)
-        r.hasOwnProperty(t)&&void 0!==r[t]&&s.push(h(t)+"="+h(r[t]));return s.join("&")},
-        n=function(r,s,t,u,v,w,x){var z="https://www.google-analytics.com/collect",
-        A=m({v:"1",ds:"web",aip:c.anonymizeIp?1:void 0,tid:b,cid:l(),t:r||"pageview",
-        sd:c.colorDepth&&screen.colorDepth?screen.colorDepth+"-bits":void 0,dr:e.referrer||
-        void 0,dt:e.title,dl:e.location.origin+e.location.pathname+e.location.search,ul:c.language?
-        (f.language||"").toLowerCase():void 0,de:c.characterSet?e.characterSet:void 0,
-        sr:c.screenSize?(a.screen||{}).width+"x"+(a.screen||{}).height:void 0,vp:c.screenSize&&
-        a.visualViewport?(a.visualViewport||{}).width+"x"+(a.visualViewport||{}).height:void 0,
-        ec:s||void 0,ea:t||void 0,el:u||void 0,ev:v||void 0,exd:w||void 0,exf:"undefined"!=typeof x&&
-        !1==!!x?0:void 0});if(f.sendBeacon)f.sendBeacon(z,A);else{var y=new XMLHttpRequest;
-        y.open("POST",z,!0),y.send(A)}};d.pushState=function(r){return"function"==typeof d.onpushstate&&
-        d.onpushstate({state:r}),setTimeout(n,c.delay||10),i.apply(d,arguments)},n(),
-        a.ma={trackEvent:function o(r,s,t,u){return n("event",r,s,t,u)},
-        trackException:function q(r,s){return n("exception",null,null,null,null,r,s)}}})
-        (window,"UA-132758959-1",{anonymizeIp:true,colorDepth:true,characterSet:true,screenSize:true,language:true});
-      </script>
 
     <script src="static/js/app.js"></script>
     <link rel="stylesheet" href="static/css/style.css">

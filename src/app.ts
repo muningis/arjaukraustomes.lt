@@ -1,7 +1,6 @@
 import CountDown from './count_down';
 import ServiceWorkerFactory from './service_worker';
-import Tracker from './tracker';
 
-Tracker.trackPageLoad();
-new CountDown(1547823600000);
+new CountDown(1548342000000, '.js-1133a');
+new CountDown(1548428400000, '.js-313a');
 new ServiceWorkerFactory();
