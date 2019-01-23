@@ -1,6 +1,16 @@
 import CountDown from './count_down';
 import ServiceWorkerFactory from './service_worker';
 
-new CountDown(1548342000000, '.js-1133a');
-new CountDown(1548428400000, '.js-313a');
+switch (location.pathname) {
+    case '/3':
+    case '/13':
+        new CountDown(1548342000000, '.js-countdown');
+        break;
+    case '/11':
+    case '/33':
+        new CountDown(1548428400000, '.js-countdown');
+        break;
+    default:
+}
+
 new ServiceWorkerFactory();
